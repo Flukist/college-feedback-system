@@ -1,16 +1,15 @@
 @extends('layouts.app')
 @section('navbar')
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-inverse">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Feedback system</a>
+            <div class="navbar-header" style="padding: 7px;">
+                <a class="navbar-brand" href="#" style="margin: auto !important;">Feedback System</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="btn btn-lg btn-success" style="margin:auto 15px"><a href="{{ route('login') }}" class="w3-text-black">Admin Login</a></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -21,26 +20,20 @@
         <div class="container">
             <div class="jumbotron">
                 <div class="row">
-                    <h1>Welcome to feedback system</h1>
-                    <div class="col-lg-4">
-                        <div class="w3-card w3-black w3-animate-top w3-round-large w3-center" id="txt"></div>
-                        <div class="w3-card-4 w3-blue-gray w3-animate-top w3-round-large w3-center" id="date"></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                        <p><a class="btn btn-lg btn-success" href="{{ URL::route('login') }}" role="button">Admin Login</a></p>
+                        <div class="w3-animate-top w3-black" id="txt" style="height: 160px; width: 160px; font-size: 27px; padding: 55px 0px 0 0; border-radius: 50%; margin: 0 auto; border:8px solid #5a738e"></div>
+                        <div class=" w3-animate-top w3-round-large w3-center  " style="font-size: 27px;" id="date"></div>
+                        <div style="border-bottom: 1px dotted black; max-width: 330px;margin: 0 auto;"> </div>
                     </div>
                 </div>
             </div>
 
             <div class="student-login">
-                <div class="col-lg-4 pull-right col-lg-pull-4">
-                    <form class="form-signin">
+                    <form class="" style="margin: 0 auto; max-width: 330px; padding: 15px;">
                         <h2 class="form-signin-heading">Student sign in</h2>
-                        <input type="text" id="token" class="form-control" placeholder="token" required autofocus>
+                        <input type="text" id="token" class="form-control" placeholder="token" required autofocus style="border: 0;outline: 0;
+                        background: transparent;border-bottom: 1px solid lightblue; margin-bottom: 15px;">
                         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                     </form>
-                </div>
             </div>
         </div>
     @endsection
